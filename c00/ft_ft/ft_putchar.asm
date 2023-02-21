@@ -7,7 +7,7 @@ ft_putchar:
 	
 	sub		rsp, 8		; allocate 8 bytes for the buffer
 	
-	mov		byte [rsp], dil	; store the character in the buffer
+	mov		[rsp], dil	; store the character in the buffer
 	
 	mov		rax, 1		; sys_write system call number
 	mov		rdi, 1		; stdout file descriptor
